@@ -1,0 +1,64 @@
+echo Heat3d
+./ZFP ../Inputdata/Heat3d.dat.b 192 192 192
+./pcaZFP ../Inputdata/Heat3d.dat.b 192 192 192
+./svdZFP ../Inputdata/Heat3d.dat.b 192 192 192
+./waveletZFP ../Inputdata/Heat3d.dat.b 192 192 192
+
+echo Laplace
+./ZFP ../Inputdata/Laplace.dat.b 96 96 100 
+./pcaZFP ../Inputdata/Laplace.dat.b 96 96 100
+./svdZFP ../Inputdata/Laplace.dat.b 96 96 100
+./waveletZFP ../Inputdata/Laplace.dat.b 96 96 100
+
+echo Wave
+./ZFP ../Inputdata/Wave.dat.b 80 512
+./pcaZFP ../Inputdata/Wave.dat.b 80 512
+./svdZFP ../Inputdata/Wave.dat.b 80 512
+./waveletZFP ../Inputdata/Wave.dat.b 80 512
+
+echo Sedov
+./ZFP ../Inputdata/Sedov_pres.dat.b 200 200
+./pcaZFP ../Inputdata/Sedov_pres.dat.b 200 200
+./svdZFP ../Inputdata/Sedov_pres.dat.b 200 200
+./waveletZFP ../Inputdata/Sedov_pres.dat.b 200 200
+
+echo Astro
+./ZFP ../Inputdata/astro.dat 128 128 4 
+./pcaZFP ../Inputdata/astro.dat 128 128 4 
+./svdZFP ../Inputdata/astro.dat 128 128 4
+./waveletZFP ../Inputdata/astro.dat 128 128 4
+#0.95 or L=1
+#Hurricane ISABEL
+echo ISABEL
+./ZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  100 100 250
+./pcaZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  100 100 250
+./svdZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  100 100 250
+./waveletZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  100 100 250
+
+echo CESM-ATM
+./ZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+./pcaZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+./svdZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+./waveletZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+
+
+echo NYX
+./ZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 100 100 250 
+./pcaZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 100 100 250
+./svdZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 100 100 250
+./waveletZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 100 100 250
+
+
+echo XGC
+./ZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 100 100 1000 
+./pcaZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 100 100 1000
+./svdZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 100 100 1000
+./waveletZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 100 100 1000
+
+
+echo SD
+./ZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 100 100 250 
+./pcaZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 100 100 250
+./svdZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 100 100 250
+./waveletZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 100 100 250
+

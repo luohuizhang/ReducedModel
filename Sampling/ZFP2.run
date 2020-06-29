@@ -1,0 +1,64 @@
+echo Heat3d
+../ZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>ZFPcr.result
+../pcaZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>pcaZFPcr.result
+../svdZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>svdZFPcr.result
+../waveletZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>waveletZFPcr.result
+
+echo Laplace
+../ZFP ../Inputdata/Laplace.dat.b 960 960 >>ZFPcr.result 
+../pcaZFP ../Inputdata/Laplace.dat.b 960 960 >>pcaZFPcr.result
+../svdZFP ../Inputdata/Laplace.dat.b 960 960 >>svdZFPcr.result
+../waveletZFP ../Inputdata/Laplace.dat.b 960 960 >>waveletZFPcr.result
+
+echo Wave
+../ZFP ../Inputdata/Wave.dat.b 80 512 >>ZFPcr.result
+../pcaZFP ../Inputdata/Wave.dat.b 80 512 >>pcaZFPcr.result
+../svdZFP ../Inputdata/Wave.dat.b 80 512 >>svdZFPcr.result
+../waveletZFP ../Inputdata/Wave.dat.b 80 512 >>waveletZFPcr.result
+
+echo Sedov
+../ZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>ZFPcr.result
+../pcaZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>pcaZFPcr.result
+../svdZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>svdZFPcr.result
+../waveletZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>waveletZFPcr.result
+
+echo Astro
+../ZFP ../Inputdata/astro.dat 256 256 >>ZFPcr.result
+../pcaZFP ../Inputdata/astro.dat 256 256 >>pcaZFPcr.result
+../svdZFP ../Inputdata/astro.dat 256 256 >>svdZFPcr.result
+../waveletZFP ../Inputdata/astro.dat 256 256 >>waveletZFPcr.result
+#0.95 or L=1
+#Hurricane ISABEL
+echo ISABEL
+../ZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>ZFPcr.result
+../pcaZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>pcaZFPcr.result
+../svdZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>svdZFPcr.result
+../waveletZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>waveletZFPcr.result
+
+echo CESM-ATM
+../ZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>ZFPcr.result
+../pcaZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>pcaZFPcr.result
+../svdZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>svdZFPcr.result
+../waveletZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>waveletZFPcr.result
+
+
+echo NYX
+../ZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>ZFPcr.result
+../pcaZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>pcaZFPcr.result
+../svdZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>svdZFPcr.result
+../waveletZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>waveletZFPcr.result
+
+
+echo XGC
+../ZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 20694 >>ZFPcr.result
+../pcaZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 20694 >>pcaZFPcr.result
+../svdZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449 6 >>svdZFPcr.result
+../waveletZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 20694 >>waveletZFPcr.result
+
+
+echo SD
+../ZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>ZFPcr.result
+../pcaZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>pcaZFPcr.result
+../svdZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>svdZFPcr.result
+../waveletZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>waveletZFPcr.result
+

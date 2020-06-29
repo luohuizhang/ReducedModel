@@ -1,0 +1,49 @@
+ #!/bin/bash
+ #    Begin PBS directives
+ #PBS -A csc143 
+ #PBS -N Huizhang
+ #PBS -j oe
+ #PBS -l walltime=2:00:00,nodes=32
+ #PBS -l gres=atlas1%atlas2
+ #    End PBS directives and begin shell commands
+ cd $MEMBERWORK/csc143/Embedded/Heat3D_submesh
+ date
+ aprun -n 512 ./explicitPar 1 
+mv outputPar_delta.dat results/outputPar_delta_1.dat
+mv outputPar.dat results/outputPar_1.dat
+ aprun -n 512 ./explicitPar 2
+mv outputPar_delta.dat results/outputPar_delta_2.dat
+mv outputPar.dat results/outputPar_2.dat
+
+ aprun -n 512 ./explicitPar 3
+mv outputPar_delta.dat results/outputPar_delta_3.dat
+mv outputPar.dat results/outputPar_3.dat
+
+ aprun -n 512 ./explicitPar 4
+mv outputPar_delta.dat results/outputPar_delta_4.dat
+mv outputPar.dat results/outputPar_4.dat
+
+ aprun -n 512 ./explicitPar 5
+mv outputPar_delta.dat results/outputPar_delta_5.dat
+mv outputPar.dat results/outputPar_5.dat
+
+ aprun -n 512 ./explicitPar 6
+mv outputPar_delta.dat results/outputPar_delta_6.dat
+mv outputPar.dat results/outputPar_6.dat
+
+ aprun -n 512 ./explicitPar 7
+mv outputPar_delta.dat results/outputPar_delta_7.dat
+mv outputPar.dat results/outputPar_1.dat
+
+ aprun -n 512 ./explicitPar 8
+mv outputPar_delta.dat results/outputPar_delta_8.dat
+mv outputPar.dat results/outputPar_8.dat
+
+ aprun -n 512 ./explicitPar 9
+mv outputPar_delta.dat results/outputPar_delta_9.dat
+mv outputPar.dat results/outputPar_9.dat
+
+ aprun -n 512 ./explicitPar 10
+mv outputPar_delta.dat results/outputPar_delta_10.dat
+mv outputPar.dat results/outputPar_10.dat
+

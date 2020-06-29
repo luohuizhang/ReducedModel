@@ -1,0 +1,54 @@
+echo Heat3d
+./SZ ../Inputdata/Heat3d.dat.b 192 192 192 >>SZ.txt
+./pcaSZ ../Inputdata/Heat3d.dat.b 192 192 192 >>SZ.txt
+./svdSZ ../Inputdata/Heat3d.dat.b 192 192 192 >>SZ.txt
+
+echo Laplace
+./SZ ../Inputdata/Laplace.dat.b 960 960 >>SZ.txt
+./pcaSZ ../Inputdata/Laplace.dat.b 960 960 >>SZ.txt
+./svdSZ ../Inputdata/Laplace.dat.b 960 960 >>SZ.txt
+
+echo Wave
+./SZ ../Inputdata/Wave.dat.b 80 512 >>SZ.txt
+./pcaSZ ../Inputdata/Wave.dat.b 80 512 >>SZ.txt
+./svdSZ ../Inputdata/Wave.dat.b 80 512 >>SZ.txt
+
+echo Sedov
+./SZ ../Inputdata/Sedov_pres.dat.b 200 200 >>SZ.txt
+./pcaSZ ../Inputdata/Sedov_pres.dat.b 200 200 >>SZ.txt
+./svdSZ ../Inputdata/Sedov_pres.dat.b 200 200 >>SZ.txt
+
+echo Astro
+./SZ ../Inputdata/astro.dat 256 256 >>SZ.txt
+./pcaSZ ../Inputdata/astro.dat 256 256 >>SZ.txt
+./svdSZ ../Inputdata/astro.dat 256 256 >>SZ.txt
+#0.95 or L=1
+#Hurricane ISABEL
+echo ISABEL
+./SZfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>SZ.txt
+./pcaSZfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>SZ.txt
+./svdSZfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>SZ.txt
+
+echo CESM-ATM
+./SZfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>SZ.txt
+./pcaSZfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>SZ.txt
+./svdSZfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>SZ.txt
+
+
+echo NYX
+./SZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>SZ.txt
+./pcaSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>SZ.txt
+./svdSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>SZ.txt
+
+
+echo XGC
+./SZ /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449 >>SZ.txt 
+./pcaSZ /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449 >>SZ.txt
+./svdSZ /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449  >>SZ.txt
+
+
+echo SD
+./SZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>SZ.txt
+./pcaSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>SZ.txt
+./svdSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>SZ.txt
+

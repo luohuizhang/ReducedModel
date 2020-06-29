@@ -1,0 +1,54 @@
+echo Heat3d
+./ZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>ZFP.txt
+./pcaZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>ZFP.txt
+./svdZFP ../Inputdata/Heat3d.dat.b 192 192 192 >>ZFP.txt
+
+echo Laplace
+./ZFP ../Inputdata/Laplace.dat.b 960 960 >>ZFP.txt
+./pcaZFP ../Inputdata/Laplace.dat.b 960 960 >>ZFP.txt
+./svdZFP ../Inputdata/Laplace.dat.b 960 960 >>ZFP.txt
+
+echo Wave
+./ZFP ../Inputdata/Wave.dat.b 80 512 >>ZFP.txt
+./pcaZFP ../Inputdata/Wave.dat.b 80 512 >>ZFP.txt
+./svdZFP ../Inputdata/Wave.dat.b 80 512 >>ZFP.txt
+
+echo Sedov
+./ZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>ZFP.txt
+./pcaZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>ZFP.txt
+./svdZFP ../Inputdata/Sedov_pres.dat.b 200 200 >>ZFP.txt
+
+echo Astro
+./ZFP ../Inputdata/astro.dat 256 256 >>ZFP.txt
+./pcaZFP ../Inputdata/astro.dat 256 256 >>ZFP.txt
+./svdZFP ../Inputdata/astro.dat 256 256 >>ZFP.txt
+#0.95 or L=1
+#Hurricane ISABEL
+echo ISABEL
+./ZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>ZFP.txt
+./pcaZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>ZFP.txt
+./svdZFPfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10 >>ZFP.txt
+
+echo CESM-ATM
+./ZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>ZFP.txt
+./pcaZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>ZFP.txt
+./svdZFPfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10 >>ZFP.txt
+
+
+echo NYX
+./ZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>ZFP.txt
+./pcaZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>ZFP.txt
+./svdZFPfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5 >>ZFP.txt
+
+
+echo XGC
+./ZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449 >>ZFP.txt 
+./pcaZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449 >>ZFP.txt
+./svdZFP /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449  >>ZFP.txt
+
+
+echo SD
+./ZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>ZFP.txt
+./pcaZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>ZFP.txt
+./svdZFP /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>ZFP.txt
+

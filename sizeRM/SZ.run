@@ -1,0 +1,54 @@
+echo Heat3d
+./pcaSZ ../Inputdata/Heat3d.dat.b 192 192 192
+./svdSZ ../Inputdata/Heat3d.dat.b 192 192 192
+./waveletSZ ../Inputdata/Heat3d.dat.b 192 192 192
+
+echo Laplace
+./pcaSZ ../Inputdata/Laplace.dat.b 960 960
+./svdSZ ../Inputdata/Laplace.dat.b 960 960
+./waveletSZ ../Inputdata/Laplace.dat.b 960 960
+
+echo Wave
+./pcaSZ ../Inputdata/Wave.dat.b 80 512
+./svdSZ ../Inputdata/Wave.dat.b 80 512
+./waveletSZ ../Inputdata/Wave.dat.b 80 512
+
+echo Sedov
+./pcaSZ ../Inputdata/Sedov_pres.dat.b 200 200
+./svdSZ ../Inputdata/Sedov_pres.dat.b 200 200
+./waveletSZ ../Inputdata/Sedov_pres.dat.b 200 200
+
+echo Astro
+./pcaSZ ../Inputdata/astro.dat 256 256
+./svdSZ ../Inputdata/astro.dat 256 256
+./waveletSZ ../Inputdata/astro.dat 256 256
+#0.95 or L=1
+#Hurricane ISABEL
+echo ISABEL
+./pcaSZfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10
+./svdSZfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10
+./waveletSZfloat /media/luo/CODAR/100x500x500/Pf48.bin.f32  500 500 10
+
+echo CESM-ATM
+./pcaSZfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+./svdSZfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+./waveletSZfloat /media/luo/CODAR/1800x3600/FLUT_1_1800_3600.dat 180 360 10
+
+
+echo NYX
+./pcaSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
+./svdSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
+./waveletSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
+
+
+echo XGC
+./pcaSZ /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449
+./svdSZ /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449 
+./waveletSZ /media/luo/CODAR/XGC/xgc.3d.08100.dat 512 3449
+
+
+echo SD
+./pcaSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
+./svdSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
+./waveletSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
+
