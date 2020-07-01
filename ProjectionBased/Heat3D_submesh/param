@@ -11,7 +11,7 @@
   z_domains
 8
   MaxStep
-2840
+50000
   dt
 1.0e-1
   cnv_tol

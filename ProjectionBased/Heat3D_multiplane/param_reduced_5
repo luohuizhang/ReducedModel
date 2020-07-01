@@ -3,13 +3,13 @@
   size_y
 192
   size_z
-192
+1
   x_domains
 8
   y_domains
 8
   z_domains
-8
+1
   MaxStep
 50000
   dt
