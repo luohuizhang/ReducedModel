@@ -44,10 +44,10 @@ echo CESM-ATM
 
 
 echo NYX
-./SZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
-./pcaSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
-./svdSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
-./waveletSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 5
+./SZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 512
+./pcaSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 512
+./svdSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 512
+./waveletSZfloat /media/luo/CODAR/512x512x512/temperature.dat 512 512 512
 
 
 echo XGC
@@ -58,8 +58,8 @@ echo XGC
 
 
 echo SD
-./SZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
-./pcaSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
-./svdSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
-./waveletSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5
+./SZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 500 11
+./pcaSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 500 11
+./svdSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 500 11
+./waveletSZ /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 500 11
 

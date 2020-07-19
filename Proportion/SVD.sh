@@ -31,5 +31,5 @@ echo XGC
 
 
 echo SD
-./svd /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 5 >>svd.result
+./svd /media/luo/CODAR/S3D/stat_planar.1.1000E-03.field.mpi 500 500 500 11 >>svd.result
 
