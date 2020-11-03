@@ -101,6 +101,8 @@ ax.set_ylabel("$\\Phi(t,x)$",font)
 ax.set_ylim(bottom=-0, top=.26)
 #ax.set_xlabel("Variable $x$",font)
 
+ax.legend(prop=font,ncol=1)
+
 ax = fig.add_subplot(2,2,2)
 ax.set_ylim(bottom=-6,top=0)
 for t in [0.05,0.01,0.001]:
@@ -110,6 +112,7 @@ ax.set_ylim(bottom=-6, top=-1)
 ax.set_ylabel("$\\log\\Phi(t,x)$",font)
 #ax.set_xlabel("Variable $x$",font)
 
+#ax.legend(prop=font,ncol=1)
 
 x, y=r[0.01]
 for i,v in enumerate(x):
@@ -149,6 +152,8 @@ ax.set_ylabel("$\\frac{\\partial^3}{\\partial x^3}\\Phi(t,x)$",font)
 #ax_t.set_xlabel("Variable $x$")
 ax.set_xlabel("Variable $x$",font)
 
+#ax.legend(prop=font,ncol=1)
+
 ax = fig.add_subplot(2,2,4)
 # ax.set_yscale("log")
 ax.set_ylim(bottom=-0, top=12)
@@ -158,9 +163,9 @@ for t in [0.05,0.01,0.001]:
 ax.set_ylabel("$\\log\\frac{\\partial^3}{\\partial x^3}\\Phi(t,x)$",font)
 ax.set_xlabel("Variable $x$",font)
 #ax.legend(prop=font,ncol=1)
-#plt.savefig(name_hat+'function.pdf', format='pdf',bbox_inches="tight",pad_inches=0)
+plt.savefig(name_hat+'function.pdf', format='pdf',bbox_inches="tight",pad_inches=0)
 
-#plt.show()
+plt.show()
 
 
 axis_font = {'size':'28'}
@@ -201,11 +206,13 @@ for t in [0.001,0.01,0.05]:
     factor = 1280*N**(-3)/6
     fig = plt.figure(figsize=(8,6))
     ax = fig.add_subplot(1,1,1)
-    ax.plot(np.exp(hitratios[t][0][0])*factor, hitratios[t][0][1])
-    ax.plot(np.exp(hitratios[t][1][0])*factor, hitratios[t][1][1])
-    ax.plot(np.exp(hitratios[t][2][0])*factor, hitratios[t][2][1])
+    arr1=ax.plot(np.exp(hitratios[t][0][0])*factor, hitratios[t][0][1])
+    arr2=ax.plot(np.exp(hitratios[t][1][0])*factor, hitratios[t][1][1])
+    arr3=ax.plot(np.exp(hitratios[t][2][0])*factor, hitratios[t][2][1])
     ax.set_xlabel("error bound, $t=%.3f$"%t,font)
     ax.set_ylabel("estimated hit-ratio",font)
     ax.set_xscale("log")
+    if t==0.001:
+        ax.legend(['t=0.001','t=0.01','t=0.05'],prop=font)
     plt.savefig(name_hat+'error'+str(int(t*1000))+'.pdf', format='pdf',bbox_inches="tight",pad_inches=0)
     #plt.show()
